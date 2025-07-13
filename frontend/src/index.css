@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.app {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.quiz, .auth, .result, .results-history {
+  text-align: left;
+}
+
+.quiz h2, .auth h2, .result h2, .results-history h2 {
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.quiz p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.option input {
+  cursor: pointer;
+}
+
+.next-button, .auth-button, .restart-button, .logout-button, .toggle-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.next-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.next-button:hover:not(:disabled), .auth-button:hover, .restart-button:hover, .logout-button:hover, .toggle-button:hover {
+  background-color: #2980b9;
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.toggle-auth {
+  margin-top: 10px;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.result p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.results-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.results-history li {
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.error, .loading {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 1.2em;
+  margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .quiz p {
+    font-size: 1em;
+  }
+
+  .next-button, .auth-button, .restart-button, .logout-button {
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
